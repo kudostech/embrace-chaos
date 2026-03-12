@@ -37,21 +37,66 @@ function ff(ee){
    }
 }
 const rr=document.getElementById("rr")
+const ooo=document.getElementById("oo")
 var bbb=[];
+var nc=1;
+var pv=0;
+var kk=0;
+var po="=";
 function ff1(ee){
    //bbb[0].value="ert";
+   nv=parseInt(rr.innerText);
+   switch (this.value) {
+    case "+":
+    case "-":
+    case "*":
+    case "=":
+        switch (po) {
+            case "+":nv=pv+nv;break;
+            case "-":nv=pv-nv;break;
+            case "*":nv=pv*nv;break;
+            case "=":break;
+
+        }
+        nc=1;
+        ooo.innerText= po=this.value;
+        rr.innerText=nv;
+        pv=nv;
+        break;
    
-   rr.innerText+=this.value;
+    default:
+        if(nc>0){
+           rr.innerText="";
+           nc=0;
+        }
+        rr.innerText+=this.value;
+        break;
+   }
+   
    for(var i=0;i<10;i++){
       var t=bbb[i].value;
       var r=Math.floor(Math.random()*9);
       bbb[i].value=bbb[r].value;
       bbb[r].value=t;
    }
+   if(kk>10)
+    for(var i=10;i<14;i++){
+      var t=bbb[i].value;
+      var r=Math.floor(Math.random()*3)+10;
+      bbb[i].value=bbb[r].value;
+      bbb[r].value=t;
+   }
+   if(kk>20)
+    for(var i=0;i<14;i++){
+      var t=bbb[i].value;
+      var r=Math.floor(Math.random()*13);
+      bbb[i].value=bbb[r].value;
+      bbb[r].value=t;
+   }
 
-
+   kk++;
 }
-for(var i=0;i<10;i++){
+for(var i=0;i<14;i++){
    bbb[i]=document.getElementById("bb"+i)
    bbb[i].addEventListener("click",ff1)
 }
