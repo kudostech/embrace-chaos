@@ -49,12 +49,12 @@ function ff1(ee){
    switch (this.value) {
     case "+":
     case "-":
-    case "*":
+    case "×":
     case "=":
         switch (po) {
             case "+":nv=pv+nv;break;
             case "-":nv=pv-nv;break;
-            case "*":nv=pv*nv;break;
+            case "×":nv=pv*nv;break;
             case "=":break;
 
         }
