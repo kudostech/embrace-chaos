@@ -15,7 +15,7 @@ Press the button and we will surrender your fate to the digital gods of chaos.
 	<fieldset>
 		<legend>Chaotic Calculator</legend>
 		<label for="name"> Number 1:</label>
-		<input type="number" id="name" name="number1" required placeholder="Enter number here"/>
+		<input type="number" id="n1" name="number1" required placeholder="Enter number here"/>
 		<select id="cal" name="calType">
 			<option value = "plus">+</option>
 			<option value ="minus">-</option>
@@ -23,7 +23,7 @@ Press the button and we will surrender your fate to the digital gods of chaos.
 			<option value ="devision">/</option>
 		</select>
 		<label for="name"> Number 2:</label>
-		<input type="number" id="name" name="number2" required placeholder="Enter number here"/>
+		<input type="number" id="n2" name="number2" required placeholder="Enter number here"/>
 		
 	</fieldset>
 
@@ -35,11 +35,31 @@ Press the button and we will surrender your fate to the digital gods of chaos.
 		<input type="text" id="name" name="number2" required placeholder="Tell me what did you tuck in?"/>
 		
 	</fieldset>
+	<fieldset>
+		<legend>Chaotic Calculator2</legend>
+		<input type="button" id="bb0" value="0"></input>
+		<input type="button" id="bb1" value="1"></input>
+		<input type="button" id="bb2" value="2"></input>
+		<input type="button" id="bb3" value="3"></input>
+		<input type="button" id="bb4" value="4"></input>
+		<input type="button" id="bb5" value="5"></input>
+		<input type="button" id="bb6" value="6"></input>
+		<input type="button" id="bb7" value="7"></input>
+		<input type="button" id="bb8" value="8"></input>
+		<input type="button" id="bb9" value="9"></input>
+		<input type="button" id="bb10" value="+"></input>
+		<input type="button" id="bb11" value="-"></input>
+		<input type="button" id="bb12" value="*"></input>
+		<input type="button" id="bb13" value="="></input>
+		<label for="result" id="rr">00000000</label>
+		<label for="result" id="oo">=</label>
+	</fieldset>
 
 </form>
 
 
-<button type="submit" value="submit">I'm not a button!</button>
+<button type="submit" id="b1" value="submit">I'm not a button!</button>
 
 </body>
+<script src="calculator.js"></script>
 </html>
