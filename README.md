@@ -3,6 +3,8 @@
 Every day starts with thousands of decisions. Suffering from Decision Fatigue? Stop overthinking and let the digital gods of chaos take the wheel.
 This app is designed to strip away the burden of choice and replace it with spontaneous action.
 
+Visit the website here: https://embrace-main.vercel.app/
+
 
 ## How It Works
 - Surrender your fate: Open the app when you're stuck in a loop of indecision.
