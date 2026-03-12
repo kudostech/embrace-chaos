@@ -15,9 +15,9 @@ $("h5").css("color", textColor)
 $("h6").css("color", textColor)
 
 let paragraph = "rgb(" + (r - 255) + "," + (g - 255) + "," + (b - 255) + ")"
-$("legend").css("color", textColor)
-$("label").css("color", textColor)
-$("p").css("color", textColor)
+$("legend").css("color", textColor);
+$("label").css("color", textColor);
+$("p").css("color", textColor);
 
 $("button").css("background", textColor)
 $("button").css("color", backgroundColor)
@@ -25,3 +25,8 @@ $("button").css("height", r % 100+ "rem")
 
 $("button").css("width", r % 100+ "rem")
 
+$("#buttonSet").css("display", "grid")
+$("#buttonSet").css("grid-template-columns", "repeat(4, 1fr)")
+$("#buttonSet").css("gap", "10px")
+$("#buttonSet").css("width", "fit-content")
+$("input").css("width", "1.5rem")
