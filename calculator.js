@@ -43,9 +43,11 @@ var nc=1;
 var pv=0;
 var kk=0;
 var po="=";
+var ct="";
+const hos=["u","b","i","sub","sup"]
 function ff1(ee){
    //bbb[0].value="ert";
-   nv=parseInt(rr.innerText);
+   nv=parseInt(ct);
    switch (this.value) {
     case "+":
     case "-":
@@ -60,16 +62,16 @@ function ff1(ee){
         }
         nc=1;
         ooo.innerText= po=this.value;
-        rr.innerText=nv;
+        ct=nv;
         pv=nv;
         break;
    
     default:
         if(nc>0){
-           rr.innerText="";
+           ct="";
            nc=0;
         }
-        rr.innerText+=this.value;
+        ct=ct+this.value;
         break;
    }
    
@@ -79,21 +81,39 @@ function ff1(ee){
       bbb[i].value=bbb[r].value;
       bbb[r].value=t;
    }
-   if(kk>10)
+   if(kk>20)
     for(var i=10;i<14;i++){
       var t=bbb[i].value;
       var r=Math.floor(Math.random()*3)+10;
       bbb[i].value=bbb[r].value;
       bbb[r].value=t;
    }
-   if(kk>20)
+   if(kk>40)
     for(var i=0;i<14;i++){
       var t=bbb[i].value;
       var r=Math.floor(Math.random()*13);
       bbb[i].value=bbb[r].value;
       bbb[r].value=t;
    }
-
+   if(kk>10){
+    
+     if(kk<30){
+       var r=Math.floor(Math.random()*5);
+       var hc=hos[r];
+       rr.innerHTML="<"+hc+">"+ct+"</"+hc+">";
+     }else{
+   var ts="";
+   ct=""+ct;
+   for(var i=0;i<ct.length;i++){
+      var r=Math.floor(Math.random()*5);
+      var hc=hos[r];
+      ts+="<"+hc+">"+ct[i]+"</"+hc+">";
+   }
+   rr.innerHTML=ts;
+   }
+   }else{
+     rr.innerHTML=ct;
+   }
    kk++;
 }
 for(var i=0;i<14;i++){
